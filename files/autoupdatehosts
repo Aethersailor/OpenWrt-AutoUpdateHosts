@@ -4,13 +4,13 @@
 
 echo "开始更新合并 hosts 文件..."
 
-# 删除之前的 AWAvenue-Ads-Rule 条目
-echo "删除之前的 AWAvenue-Ads-Rule 条目..."
+# 删除现有的 AWAvenue-Ads-Rule 去广告规则条目
+echo "删除现有的 AWAvenue-Ads-Rule 去广告规则条目..."
 sed -i '/# AWAvenue-Ads-Rule Start/,/# AWAvenue-Ads-Rule End/d' /etc/hosts
 
-# 拉取 AWAvenue-Ads-Rule 的 hosts 文件，并添加起始和结束标记
+# 拉取并合并 AWAvenue-Ads-Rule 的 hosts 文件，并添加起始和结束标记
 # 删除 AWAvenue-Ads-Rule 其中的 "127.0.0.1 localhost" 和 "::1 localhost" 条目，因为原始 hosts 文件已自带
-echo "下拉取并合并 AWAvenue-Ads-Rule 的 hosts 文件..."
+echo "拉取并合并 AWAvenue-Ads-Rule 的 hosts 文件..."
 curl https://cdn.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-hosts.txt | \
     sed '/127.0.0.1 localhost/d; /::1 localhost/d; 1s/^/# AWAvenue-Ads-Rule Start\n/; $s/$/\n# AWAvenue-Ads-Rule End/' >> /etc/hosts
 
@@ -18,11 +18,11 @@ curl https://cdn.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAv
 echo "删除空行..."
 sed -i '/^$/d' /etc/hosts
 
-# 删除之前的 GitHub520 Host 条目
-echo "删除之前的 GitHub520 Host 条目..."
+# 删除现有的 GitHub520 Host 加速规则条目
+echo "删除现有的 GitHub520 Host 加速规则条目..."
 sed -i '/# GitHub520 Host Start/,/# GitHub520 Host End/d' /etc/hosts
 
-# 拉取 GitHub520 Host 的 hosts 文件
+# 拉取并合并 GitHub520 Host 的 hosts 文件
 echo "拉取并合并 GitHub520 Host 的 hosts 文件..."
 curl https://cdn.jsdelivr.net/gh/521xueweihan/GitHub520@main/hosts >> /etc/hosts
 
@@ -50,7 +50,7 @@ if [ -f "/etc/init.d/openclash" ]; then
     echo "已重启 OpenClash 和 Dnsmasq，Hosts 已生效！"
 else
     # 如果不存在 OpenClash 的启动脚本，则直接重启 dnsmasq
-    echo "未检测到 OpenClash，正在直接重启 Dnsmasq..."
+    echo "未检测到 OpenClash，正在重启 Dnsmasq..."
     /etc/init.d/dnsmasq restart
     echo "已重启 Dnsmasq，Hosts 已生效！"
 fi
