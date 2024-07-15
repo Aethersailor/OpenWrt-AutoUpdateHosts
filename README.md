@@ -29,7 +29,7 @@ curl -sSL https://cdn.jsdelivr.net/gh/Aethersailor/OpenWrt-AutoUpdateHosts@main/
 2. 下载最新的[秋风广告规则](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)以及 [GitHub520](https://github.com/521xueweihan/GitHub520) 加速规则并合并至 /etc/hosts 文件。
 3. 重启 Dnsmasq 使 hosts 文件生效。  
 
-**如因网络原因导致 curl 命令执行不成功，可以自行下载 install.sh 文件到 root 目录下，然后执行 ./install.sh **  
+** 如因网络原因导致 curl 命令执行不成功，可以自行下载 install.sh 文件到 root 目录下，然后执行 ./install.sh **  
 
 **脚本不会破坏 hosts 文件内的原始内容以及人为手动添加的其他内容，不会重复添加内容，请放心食用。**  
 **如果需要人为添加其他 hosts 条目，请直接添加在 hosts 文件内容的尾部，不要添加在 start 与 end 注释之间。**  
