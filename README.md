@@ -9,8 +9,8 @@
 
 如果你是新手小白，不会配置各种 DNS 插件以及广告屏蔽插件，那么本项目可以让你一键实现自动化更新的广告屏蔽功能。
 
-如搭配 OpenClash 推荐配合本人另一个仓库的 OpenClash 订阅模板使用：[Custom_OpenClash_Rules](https://github.com/Aethersailor/Custom_OpenClash_Rules)  
-只需要 OpenClash 一个插件，无需套娃任何其他插件，即可实现效果完美的科学上网分流，且 DNS 解析无污染无泄漏泄露，国内域名自动绕过内核，可与本项目搭配一起使用。  
+如果你同时使用 OpenClash，可以借助 OpenClash 的“开发者选项”来实现类似的功能，更加完美。  
+具体见本人另一仓库 [Custom_OpenClash_Rules](https://github.com/Aethersailor/Custom_OpenClash_Rules) 的 [Wiki](https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki) 中的相关教程。  
 
 ## 使用方法  
 ### 一键安装  
