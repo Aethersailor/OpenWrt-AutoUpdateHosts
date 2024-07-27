@@ -11,7 +11,7 @@ sed -i '/# AWAvenue-Ads-Rule Start/,/# AWAvenue-Ads-Rule End/d' /etc/hosts
 # 拉取并合并 AWAvenue-Ads-Rule 的 hosts 文件，并添加起始和结束标记
 # 删除 AWAvenue-Ads-Rule 其中的 "127.0.0.1 localhost" 和 "::1 localhost" 条目，因为原始 hosts 文件已自带
 echo "拉取并合并 AWAvenue-Ads-Rule 的 hosts 文件..."
-curl https://cdn.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-hosts.txt | \
+curl https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt | \
     sed '/127.0.0.1 localhost/d; /::1 localhost/d; 1s/^/# AWAvenue-Ads-Rule Start\n/; $s/$/\n# AWAvenue-Ads-Rule End/' >> /etc/hosts
 
 # 删除空行
@@ -24,7 +24,7 @@ sed -i '/# GitHub520 Host Start/,/# GitHub520 Host End/d' /etc/hosts
 
 # 拉取并合并 GitHub520 Host 的 hosts 文件
 echo "拉取并合并 GitHub520 Host 的 hosts 文件..."
-curl https://cdn.jsdelivr.net/gh/521xueweihan/GitHub520@main/hosts >> /etc/hosts
+curl https://raw.hellogithub.com/hosts >> /etc/hosts
 
 # 删除空行
 echo "删除空行..."

@@ -14,7 +14,7 @@ sed -i '/# GitHub520 Host Start/,/# GitHub520 Host End/d' /etc/hosts
 
 # 拉取并合并 GitHub520 Host 的 hosts 文件
 echo "拉取并合并 GitHub520 Host 的 hosts 文件..."
-curl https://cdn.jsdelivr.net/gh/521xueweihan/GitHub520@main/hosts >> /etc/hosts
+curl https://raw.hellogithub.com/hosts >> /etc/hosts
 
 # 删除空行
 echo "删除空行..."
