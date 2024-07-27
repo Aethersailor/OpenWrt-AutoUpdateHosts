@@ -24,6 +24,8 @@ CRONTAB_CONTENT=$(echo "$CRONTAB_CONTENT" | grep -v -F "$CMD2")
 # 添加新命令到 crontab
 (echo "$CRONTAB_CONTENT"; echo "$TIME1 $CMD1"; echo "$TIME2 $CMD2") | crontab -
 
+echo "计划任务条目已更新。"
+
 # 立即执行第一个命令
 echo "立即执行第一个命令..."
 eval "$CMD1"
@@ -32,4 +34,5 @@ eval "$CMD1"
 echo "立即执行第二个命令..."
 eval "$CMD2"
 
-echo "Crontab 条目已更新，并且命令已立即执行。"
+echo "规则文件已拉取完成。"
+
