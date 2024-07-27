@@ -1,0 +1,1 @@
+sed -i '/^$/d; /# GitHub520 Host Start/,/# GitHub520 Host End/d' /etc/hosts && curl -s https://cdn.jsdelivr.net/gh/521xueweihan/GitHub520@main/hosts >> /etc/hosts && sed -i '/^$/d; /!/d' /etc/hosts && /etc/init.d/$( [ -f /etc/init.d/openclash ] && echo openclash || echo dnsmasq ) restart
