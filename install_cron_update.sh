@@ -6,7 +6,7 @@
 CMD1="sed -i '/^$/d; /# GitHub520 Host Start/,/# GitHub520 Host End/d' /etc/hosts && curl -s https://cdn.jsdelivr.net/gh/521xueweihan/GitHub520@main/hosts >> /etc/hosts && sed -i '/^$/d; /!/d' /etc/hosts"
 TIME1="30 4 * * *"
 
-CMD2="curl -s https://anti-ad.net/anti-ad-for-dnsmasq.conf -o /tmp/dnsmasq.d/anti-ad-for-dnsmasq.conf"
+CMD2="mkdir -p /tmp/dnsmasq.d && curl -s https://anti-ad.net/anti-ad-for-dnsmasq.conf -o /tmp/dnsmasq.d/anti-ad-for-dnsmasq.conf"
 TIME2="40 4 * * *"
 
 # 修改 dnsmasq 配置文件，取消“忽略 hosts 文件”的设定
